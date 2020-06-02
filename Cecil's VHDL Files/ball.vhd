@@ -1,3 +1,10 @@
+-- COMPSYS 305 Miniproject
+-- 2020 FPGPals
+-- Modified by Cecil Symes, csym531
+
+-- Added functionality to take mouse input, determine the ball's motion, collision with boundaries
+
+
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 use ieee.numeric_std.all;
@@ -9,18 +16,33 @@ ENTITY ball IS
 		(SIGNAL clk 						: IN std_logic;
 		SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
 		SIGNAL red, green, blue 			: OUT std_logic;
-		signal x_motion, y_motion : in std_logic_vector(9 downto 0);
 		signal frame_clk : in std_logic;
-		signal game_state : in std_logic_vector(3 downto 0);
-		signal landed, roofed : out std_logic);		
+		signal jump : in std_logic;
+		signal game_state : in std_logic_vector(3 downto 0));		
 END ball;
 
 architecture behavior of ball is
 
 SIGNAL ball_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
-SIGNAL ball_x_pos	: std_logic_vector(9 DOWNTO 0) := "0001000000"; -- Initialised to column 64
+SIGNAL ball_x_pos	: std_logic_vector(9 DOWNTO 0) := "0010000000"; -- Initialised to column 128
 SIGNAL ball_y_pos	: std_logic_vector(9 DOWNTO 0) := "0011110000"; -- Initialised to row 240
+
+	----- INTERNAL SIGNAL DECLARATIONS -----
+	-- Gravity is a constant decided on through experimentation
+	-- It is applied on every relevant frame
+	signal gravity : signed(9 downto 0) := "0000000001"; -- Value of +1
+	
+	-- Records whether jump has been held since previous frame
+	signal prev_jump : std_logic := '0';
+	
+	-- Motion to be applied to the ball on the next applicable frame
+	-- x_motion: positive is upwards, negative downwards
+	-- y_motion: positive is right, negative is left
+	signal x_motion, y_motion : signed(9 downto 0) := "0000000000";
+	
+	-- Momentum to add on jump
+	signal jump_momentum : signed(9 downto 0) := "1111101100"; -- Value of -20
 
 BEGIN           
 
@@ -48,32 +70,45 @@ ball_on <= '1' when (
 		if rising_edge(frame_clk) then
 			-- Training Active & Singleplayer Active, calculate and update position as ingame
 			if ((game_state = "0010") or (game_state = "0110")) then
-				ball_x_pos <= std_logic_vector(signed(ball_x_pos) + signed(x_motion));
-				ball_y_pos <= std_logic_vector(signed(ball_y_pos) + signed(y_motion));
+				-- Apply gravity if not on ground, and under 30 speed cap
+				if (y_motion < to_signed(30, 10)) then
+					y_motion <= y_motion + gravity;
+				end if;
+			
+				-- Check to see if the player is jumping
+				if (jump = '1') then
+					if (prev_jump = '0') then
+						-- If jump hasn't been held since previous frame, add jump_momentum
+						y_motion <= y_motion + jump_momentum;
+						prev_jump <= '1';
+					end if;
+				else
+					-- prev_jump is set to zero if no jump is input on frame
+					prev_jump <= '0';
+				end if;
+				
+				-- Check if will collide with top
+				if (to_signed(0, 10) > (signed(ball_y_pos) - signed(size) + signed(y_motion))) then
+					ball_y_pos <= size;
+					y_motion <= to_signed(0, 10);
+				-- Check if will collide with bottom
+				elsif (to_signed(480, 10) < (signed(ball_y_pos) + signed(size) + signed(y_motion))) then
+					ball_y_pos <= std_logic_vector(to_unsigned(480, 10) - unsigned(size));
+					y_motion <= to_signed(0, 10);
+				else
+				-- Calculate new ball position
+					ball_y_pos <= std_logic_vector(signed(ball_y_pos) + signed(y_motion));
+				end if;
 				
 			-- Training Paused & Singleplayer Paused hold position, do not clear
 			elsif ((game_state = "0011") or (game_state = "0111")) then
 				ball_x_pos <= ball_x_pos;
 				ball_y_pos <= ball_y_pos;
 				
-			-- All other states set motion to centre of screen
+			-- All other states set square to 2/5 along, halfway up screen
 			else
-				ball_x_pos <= "0101000000";
-				ball_y_pos <= "0011110000";
-			end if;
-			
-			-- Collision code
-			-- Collision with bottom & top
-			landed <= '0';
-			if (to_unsigned(480, 10) < unsigned(ball_y_pos) + unsigned(size)) then
-				ball_y_pos <= std_logic_vector(to_unsigned(480, 10) - unsigned(size));
-				landed <= '1';
-			end if;
-			
-			roofed <= '0';
-			if ((signed(ball_y_pos) + signed(size)) < to_signed(0, 10)) then
-				roofed <= '1';
-				ball_y_pos <= size;
+				ball_x_pos <= "0010000000"; -- Column 128
+				ball_y_pos <= "0011110000"; -- Row 240
 			end if;
 			
 		end if;
@@ -81,7 +116,7 @@ ball_on <= '1' when (
 
 -- Colours for pixel data on video signal
 -- Keeping background white and square in red
-Red <=  '1';
+Red <=  not ball_on;
 -- Turn off Green and Blue when displaying square
 Green <= not ball_on;
 Blue <=  not ball_on;

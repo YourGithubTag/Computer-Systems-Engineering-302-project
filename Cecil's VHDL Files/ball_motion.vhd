@@ -31,7 +31,7 @@ architecture behaviour of ball_motion is
 	signal prev_jump : std_logic := '0';
 	
 	-- Momentum to add on jump
-	signal jump_momentum : signed(9 downto 0) := "1111100000"; -- Value of -32
+	signal jump_momentum : signed(9 downto 0) := "1111101100"; -- Value of -20
 begin
 
 	-- Motion is only calculated during certain states
@@ -43,31 +43,26 @@ begin
 		if rising_edge(clk) then
 			-- Training Active & Singleplayer Active, calculate and update motion as ingame
 			if ((game_state = "0010") or (game_state = "0110")) then
-				-- Check if hit roof
-				if (roofed = '1') then
+				-- Check if landed, set motion to zero, can still jump after
+				if ((landed = '1') or (roofed = '1')) then
 					y_motion <= "0000000000";
-				end if;
-				
-				-- If on the ground, then zero motion and do not apply gravity
-				if (landed = '1') then
-					y_motion <= "0000000000";
-				else
-					-- Apply gravity on every frame when not landed, and when under speed cap of 30
-					if (y_motion < to_signed(30, 10)) then
-						y_motion <= y_motion + gravity;
-					end if;
 				end if;
 				
 				-- Check to see if the player is jumping
 				if (jump = '1') then
-					-- If jump hasn't been held since previous frame, then add jump momentum to x_motion
-					if (prev_jump = '0') then 
+					if ((prev_jump = '0') and (roofed = '0')) then
+						-- If jump hasn't been held since previous frame, then add jump momentum to x_motion
 						prev_jump <= '1';
 						y_motion <= y_motion + jump_momentum;
 					end if;
 				else
 					-- prev_jump is set to zero if no jump is input on frame
 					prev_jump <= '0';
+				end if;
+				
+				-- Apply gravity on every frame when not landed, and when under speed cap of 30
+				if ((y_motion < to_signed(30, 10)) and (landed = '0'))then
+					y_motion <= y_motion + gravity;
 				end if;
 			
 			-- Training Paused & Singleplayer Paused hold motion, do not clear
