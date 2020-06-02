@@ -13,18 +13,17 @@ ENTITY Pixelpriority IS
 END Pixelpriority;
 
 architecture behaviour of Pixelpriority is
-
+SIGNAL stream: std_logic_vector(4 DOWNTO 0) := "00000"
 
 begin
 
+stream <= (pipe_on & bird_on & ground_on & powerup_on & text_on);
 
 
-
-
-
-
-
-
+ X <= A(0) when (stream = "00001") else
+         A(1) when (stream = "01") else
+         A(2) when (stream = "10") else
+         A(3) when (stream = "11") else A(0);
 
 
 
