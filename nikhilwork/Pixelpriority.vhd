@@ -5,27 +5,33 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY Pixelpriority IS
-	PORT(	SIGNAL clock, vert_sync					: IN	STD_LOGIC;
+	PORT(	SIGNAL vert_sync					: IN	STD_LOGIC;
+			SIGNAL birdRBG, groundRGB, pipeRGB, powerupRGB, textRGB : 		IN std_logic_vector(2 downto 0);
 			SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
 			SIGNAL pipe_on, bird_on, ground_on, powerup_on , text_on	: IN	STD_LOGIC;
-			SIGNAL red_out, green_out, blue_out	: OUT	STD_LOGIC 
+			SIGNAL outputRGB	: OUT	std_logic_vector(2 downto 0)
 			);
 END Pixelpriority;
 
 architecture behaviour of Pixelpriority is
-SIGNAL stream: std_logic_vector(4 DOWNTO 0) := "00000"
-
 begin
 
-stream <= (pipe_on & bird_on & ground_on & powerup_on & text_on);
-
-
- X <= A(0) when (stream = "00001") else
-         A(1) when (stream = "01") else
-         A(2) when (stream = "10") else
-         A(3) when (stream = "11") else A(0);
-
-
-
-
+process (vert_sync)
+begin
+if (rising_edge(vert_sync)) then
+	if (bird_on = '1') then
+		outputRGB <= birdRBG;
+	elsif (pipe_on = '1') then
+		outputRGB <= pipeRGB;
+	elsif (text_on = '1') then
+		outputRGB <= textRGB;
+	elsif (ground_on = '1') then
+		outputRGB <= groundRGB;
+	elsif (powerup_on = '1') then
+		outputRGB <= powerupRGB;
+	else 
+		outputRGB <= birdRBG;
+	end if;
+end if;
+end process;
 end behaviour;
