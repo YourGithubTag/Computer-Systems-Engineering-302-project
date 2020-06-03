@@ -9,6 +9,7 @@ ENTITY Pixelpriority IS
 			SIGNAL birdRBG, groundRGB, pipeRGB, powerupRGB, textRGB : 		IN std_logic_vector(2 downto 0);
 			SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
 			SIGNAL pipe_on, bird_on, ground_on, powerup_on , text_on	: IN	STD_LOGIC;
+			signal game_state : in std_logic_vector(3 downto 0);
 			SIGNAL outputRGB	: OUT	std_logic_vector(2 downto 0)
 			);
 END Pixelpriority;
@@ -19,18 +20,34 @@ begin
 process (vert_sync)
 begin
 if (rising_edge(vert_sync)) then
-	if (bird_on = '1') then
-		outputRGB <= birdRBG;
-	elsif (pipe_on = '1') then
-		outputRGB <= pipeRGB;
-	elsif (text_on = '1') then
-		outputRGB <= textRGB;
-	elsif (ground_on = '1') then
-		outputRGB <= groundRGB;
-	elsif (powerup_on = '1') then
-		outputRGB <= powerupRGB;
+	if ((game_state = "0010") or (game_state = "0110") or (game_state = "0011") or (game_state = "0111")) then 
+		if (bird_on = '1') then
+			outputRGB <= birdRBG;
+		elsif (pipe_on = '1') then
+			outputRGB <= pipeRGB;
+		elsif (text_on = '1') then
+			outputRGB <= textRGB;
+		elsif (ground_on = '1') then
+			outputRGB <= groundRGB;
+		elsif (powerup_on = '1') then
+			outputRGB <= powerupRGB;
+		else 
+			outputRGB <= birdRBG;
+		end if;
 	else 
-		outputRGB <= birdRBG;
+		if (bird_on = '1') then
+			outputRGB <= birdRBG;
+		elsif (pipe_on = '1') then
+			outputRGB <= pipeRGB;
+		elsif (text_on = '1') then
+			outputRGB <= textRGB;
+		elsif (ground_on = '1') then
+			outputRGB <= groundRGB;
+		elsif (powerup_on = '1') then
+			outputRGB <= powerupRGB;
+		else 
+			outputRGB <= birdRBG;
+		end if;
 	end if;
 end if;
 end process;
