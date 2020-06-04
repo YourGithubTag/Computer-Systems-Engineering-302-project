@@ -15,7 +15,7 @@ ENTITY ball IS
 	PORT
 		(SIGNAL clk 						: IN std_logic;
 		SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
-		SIGNAL red, green, blue 			: OUT std_logic;
+		SIGNAL ball_on : OUT std_logic;
 		signal frame_clk : in std_logic;
 		signal jump : in std_logic;
 		signal game_state : in std_logic_vector(3 downto 0));		
@@ -23,7 +23,16 @@ END ball;
 
 architecture behavior of ball is
 
-SIGNAL ball_on					: std_logic;
+component char_rom IS
+	PORT
+	(
+		character_address	:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock				: 	IN STD_LOGIC ;
+		rom_mux_output		:	OUT STD_LOGIC
+	);
+end component char_rom;
+
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_x_pos	: std_logic_vector(9 DOWNTO 0) := "0010000000"; -- Initialised to column 128
 SIGNAL ball_y_pos	: std_logic_vector(9 DOWNTO 0) := "0011110000"; -- Initialised to row 240
@@ -43,23 +52,26 @@ SIGNAL ball_y_pos	: std_logic_vector(9 DOWNTO 0) := "0011110000"; -- Initialised
 	
 	-- Momentum to add on jump
 	signal jump_momentum : signed(9 downto 0) := "1111101100"; -- Value of -20
-
+	
+	-- Character address
+	signal character_addy : std_logic_vector(5 downto 0) := "000000";
+	
 BEGIN           
 
 size <= "0000001000";
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 
-ball_on <= '1' when (
-	-- In correct state
-	((game_state = "0010") or (game_state = "0110") or (game_state = "0011") or (game_state = "0111")) and
-	-- Check if pixel_column is within ball boundary
-	(unsigned(ball_x_pos) <= unsigned(pixel_column) + unsigned(size)) and
-	(unsigned(pixel_column) <= unsigned(ball_x_pos) + unsigned(size)) and
-	-- y_pos - size <= pixel_row <= y_pos + size
-	(unsigned(ball_y_pos) <= unsigned(pixel_row) + unsigned(size)) and
-	(unsigned(pixel_row) <= unsigned(ball_y_pos) + unsigned(size)) )
-	else '0';
+--ball_on <= '1' when (
+--	-- In correct state
+--	((game_state = "0010") or (game_state = "0110") or (game_state = "0011") or (game_state = "0111")) and
+--	-- Check if pixel_column is within ball boundary
+--	(unsigned(ball_x_pos) <= unsigned(pixel_column) + unsigned(size)) and
+--	(unsigned(pixel_column) <= unsigned(ball_x_pos) + unsigned(size)) and
+--	-- y_pos - size <= pixel_row <= y_pos + size
+--	(unsigned(ball_y_pos) <= unsigned(pixel_row) + unsigned(size)) and
+--	(unsigned(pixel_row) <= unsigned(ball_y_pos) + unsigned(size)) )
+--	else '0';
 
 	-- Position is only calculated during certain states
 	-- Position is updated during States 2 & 6
@@ -113,13 +125,19 @@ ball_on <= '1' when (
 			
 		end if;
 	end process position_calc;
-
--- Colours for pixel data on video signal
--- Keeping background white and square in red
-Red <=  not ball_on;
--- Turn off Green and Blue when displaying square
-Green <= not ball_on;
-Blue <=  not ball_on;
+	
+	ball_on_thing : process (clk)
+	begin
+		if rising_edge(clk) then
+			if ((pixel_row(9 downto 4) = ball_y_pos(9 downto 4)) and (pixel_column(9 downto 4) = ball_x_pos(9 downto 4))) then
+				character_addy <= "011111";
+			else
+				character_addy <= "100000";
+			end if;
+		end if;
+	end process ball_on_thing;
+	
+	rom_port_thing : char_rom port map(character_address => character_addy, font_row => pixel_row(3 downto 1), font_col => pixel_column(3 downto 1), clock => clk, rom_mux_output => ball_on);
 
 END behavior;
 
