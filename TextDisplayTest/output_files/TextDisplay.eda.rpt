@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TextDisplay
-Thu Jun 04 14:43:38 2020
+Thu Jun 04 22:27:28 2020
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jun 04 14:43:38 2020 ;
+; EDA Netlist Writer Status ; Successful - Thu Jun 04 22:27:28 2020 ;
 ; Revision Name             ; TextDisplay                           ;
 ; Top-level Entity Name     ; TextDisplay                           ;
 ; Family                    ; Cyclone III                           ;
@@ -44,42 +44,42 @@ applicable agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                        ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Option                                                                                            ; Setting                ;
-+---------------------------------------------------------------------------------------------------+------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off                    ;
-; Time scale                                                                                        ; 1 ps                   ;
-; Truncate long hierarchy paths                                                                     ; Off                    ;
-; Map illegal HDL characters                                                                        ; Off                    ;
-; Flatten buses into individual nodes                                                               ; Off                    ;
-; Maintain hierarchy                                                                                ; Off                    ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
-; Enable glitch filtering                                                                           ; Off                    ;
-; Do not write top level VHDL entity                                                                ; Off                    ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
-; Architecture name in VHDL output netlist                                                          ; structure              ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
-+---------------------------------------------------------------------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Simulation Generated Files                                                    ;
-+-------------------------------------------------------------------------------+
-; Generated Files                                                               ;
-+-------------------------------------------------------------------------------+
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_85c_slow.vho      ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_0c_slow.vho       ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_min_1200mv_0c_fast.vho     ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay.vho                        ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_85c_vhd_slow.sdo  ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_0c_vhd_slow.sdo   ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_min_1200mv_0c_vhd_fast.sdo ;
-; D:/TextDisplayTest/simulation/modelsim/TextDisplay_vhd.sdo                    ;
-+-------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                         ;
++----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                    ;
++----------------------------------------------------------------------------------------------------+
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_85c_slow.vo     ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_0c_slow.vo      ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_min_1200mv_0c_fast.vo    ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay.vo                       ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_85c_v_slow.sdo  ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_6_1200mv_0c_v_slow.sdo   ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_min_1200mv_0c_v_fast.sdo ;
+; D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/TextDisplay_v.sdo                    ;
++----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 04 14:43:38 2020
+    Info: Processing started: Thu Jun 04 22:27:27 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off TextDisplay -c TextDisplay
-Info (204019): Generated file TextDisplay_6_1200mv_85c_slow.vho in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_6_1200mv_0c_slow.vho in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_min_1200mv_0c_fast.vho in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay.vho in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_6_1200mv_85c_vhd_slow.sdo in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_6_1200mv_0c_vhd_slow.sdo in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_min_1200mv_0c_vhd_fast.sdo in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file TextDisplay_vhd.sdo in folder "D:/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_6_1200mv_85c_slow.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_6_1200mv_0c_slow.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_min_1200mv_0c_fast.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_6_1200mv_85c_v_slow.sdo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_6_1200mv_0c_v_slow.sdo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_min_1200mv_0c_v_fast.sdo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file TextDisplay_v.sdo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Thu Jun 04 14:43:38 2020
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Jun 04 22:27:28 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

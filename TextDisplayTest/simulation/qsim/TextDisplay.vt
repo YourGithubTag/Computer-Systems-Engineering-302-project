@@ -1,0 +1,391 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/04/2020 15:34:49"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    TextDisplay
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module TextDisplay_vlg_sample_tst(
+	clk,
+	pixel_col,
+	pixel_row,
+	vert_sync,
+	sampler_tx
+);
+input  clk;
+input [9:0] pixel_col;
+input [9:0] pixel_row;
+input  vert_sync;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or pixel_col or pixel_row or vert_sync)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module TextDisplay_vlg_check_tst (
+	pixel_on,
+	sampler_rx
+);
+input  pixel_on;
+input sampler_rx;
+
+reg  pixel_on_expected;
+
+reg  pixel_on_prev;
+
+reg  pixel_on_expected_prev;
+
+reg  last_pixel_on_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	pixel_on_prev = pixel_on;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	pixel_on_expected_prev = pixel_on_expected;
+end
+
+
+
+// expected pixel_on
+initial
+begin
+	pixel_on_expected = 1'bX;
+	pixel_on_expected = #999000 1'b0;
+end 
+// generate trigger
+always @(pixel_on_expected or pixel_on)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected pixel_on = %b | ",pixel_on_expected_prev);
+	$display("| real pixel_on = %b | ",pixel_on_prev);
+`endif
+	if (
+		( pixel_on_expected_prev !== 1'bx ) && ( pixel_on_prev !== pixel_on_expected_prev )
+		&& ((pixel_on_expected_prev !== last_pixel_on_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port pixel_on :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", pixel_on_expected_prev);
+		$display ("     Real value = %b", pixel_on_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_pixel_on_exp = pixel_on_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module TextDisplay_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [9:0] pixel_col;
+reg [9:0] pixel_row;
+reg vert_sync;
+// wires                                               
+wire pixel_on;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+TextDisplay i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.pixel_col(pixel_col),
+	.pixel_on(pixel_on),
+	.pixel_row(pixel_row),
+	.vert_sync(vert_sync)
+);
+
+// clk
+initial
+begin
+	repeat(24)
+	begin
+		clk = 1'b0;
+		clk = #20000 1'b1;
+		# 20000;
+	end
+	clk = 1'b0;
+	clk = #20000 1'b1;
+	clk = #19000 1'b0;
+end 
+// pixel_col[ 9 ]
+initial
+begin
+	repeat(97)
+	begin
+		pixel_col[9] = 1'b0;
+		pixel_col[9] = #512000 1'b1;
+		# 512000;
+	end
+	pixel_col[9] = 1'b0;
+	pixel_col[9] = #512000 1'b1;
+end 
+// pixel_col[ 8 ]
+initial
+begin
+	repeat(195)
+	begin
+		pixel_col[8] = 1'b0;
+		pixel_col[8] = #256000 1'b1;
+		# 256000;
+	end
+	pixel_col[8] = 1'b0;
+end 
+// pixel_col[ 7 ]
+initial
+begin
+	repeat(390)
+	begin
+		pixel_col[7] = 1'b0;
+		pixel_col[7] = #128000 1'b1;
+		# 128000;
+	end
+	pixel_col[7] = 1'b0;
+	pixel_col[7] = #128000 1'b1;
+end 
+// pixel_col[ 6 ]
+initial
+begin
+	repeat(781)
+	begin
+		pixel_col[6] = 1'b0;
+		pixel_col[6] = #64000 1'b1;
+		# 64000;
+	end
+	pixel_col[6] = 1'b0;
+end 
+// pixel_col[ 5 ]
+initial
+begin
+	repeat(1562)
+	begin
+		pixel_col[5] = 1'b0;
+		pixel_col[5] = #32000 1'b1;
+		# 32000;
+	end
+	pixel_col[5] = 1'b0;
+end 
+// pixel_col[ 4 ]
+always
+begin
+	pixel_col[4] = 1'b0;
+	pixel_col[4] = #16000 1'b1;
+	#16000;
+end 
+// pixel_col[ 3 ]
+always
+begin
+	pixel_col[3] = 1'b0;
+	pixel_col[3] = #8000 1'b1;
+	#8000;
+end 
+// pixel_col[ 2 ]
+always
+begin
+	pixel_col[2] = 1'b0;
+	pixel_col[2] = #4000 1'b1;
+	#4000;
+end 
+// pixel_col[ 1 ]
+always
+begin
+	pixel_col[1] = 1'b0;
+	pixel_col[1] = #2000 1'b1;
+	#2000;
+end 
+// pixel_col[ 0 ]
+always
+begin
+	pixel_col[0] = 1'b0;
+	pixel_col[0] = #1000 1'b1;
+	#1000;
+end 
+// pixel_row[ 9 ]
+initial
+begin
+	pixel_row[9] = 1'b0;
+end 
+// pixel_row[ 8 ]
+initial
+begin
+	pixel_row[8] = 1'b0;
+end 
+// pixel_row[ 7 ]
+initial
+begin
+	pixel_row[7] = 1'b0;
+end 
+// pixel_row[ 6 ]
+initial
+begin
+	pixel_row[6] = 1'b0;
+	pixel_row[6] = #65536000 1'b1;
+end 
+// pixel_row[ 5 ]
+initial
+begin
+	pixel_row[5] = 1'b0;
+	pixel_row[5] = #32768000 1'b1;
+	pixel_row[5] = #32768000 1'b0;
+	pixel_row[5] = #32768000 1'b1;
+end 
+// pixel_row[ 4 ]
+initial
+begin
+	repeat(3)
+	begin
+		pixel_row[4] = 1'b0;
+		pixel_row[4] = #16384000 1'b1;
+		# 16384000;
+	end
+	pixel_row[4] = 1'b0;
+end 
+// pixel_row[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		pixel_row[3] = 1'b0;
+		pixel_row[3] = #8192000 1'b1;
+		# 8192000;
+	end
+	pixel_row[3] = 1'b0;
+end 
+// pixel_row[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		pixel_row[2] = 1'b0;
+		pixel_row[2] = #4096000 1'b1;
+		# 4096000;
+	end
+	pixel_row[2] = 1'b0;
+end 
+// pixel_row[ 1 ]
+initial
+begin
+	repeat(24)
+	begin
+		pixel_row[1] = 1'b0;
+		pixel_row[1] = #2048000 1'b1;
+		# 2048000;
+	end
+	pixel_row[1] = 1'b0;
+end 
+// pixel_row[ 0 ]
+initial
+begin
+	repeat(48)
+	begin
+		pixel_row[0] = 1'b0;
+		pixel_row[0] = #1024000 1'b1;
+		# 1024000;
+	end
+	pixel_row[0] = 1'b0;
+	pixel_row[0] = #1024000 1'b1;
+end 
+
+// vert_sync
+initial
+begin
+	vert_sync = 1'b0;
+end 
+
+TextDisplay_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.pixel_col(pixel_col),
+	.pixel_row(pixel_row),
+	.vert_sync(vert_sync),
+	.sampler_tx(sampler)
+);
+
+TextDisplay_vlg_check_tst tb_out(
+	.pixel_on(pixel_on),
+	.sampler_rx(sampler)
+);
+endmodule
+

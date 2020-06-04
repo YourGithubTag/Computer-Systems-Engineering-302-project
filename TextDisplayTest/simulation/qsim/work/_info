@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\CompSys302VHDLuProject\TextDisplayTest\simulation\qsim
+vTextDisplay
+Z1 I?^bLNPZb:ECN?G27OJA<O1
+Z2 VGNQ:F8V>L6e?>oK4_zf<^2
+Z3 dD:\CompSys302VHDLuProject\TextDisplayTest\simulation\qsim
+Z4 w1591241689
+Z5 8TextDisplay.vo
+Z6 FTextDisplay.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|TextDisplay.vo|
+Z9 o-work work -O0
+Z10 n@text@display
+!i10b 1
+Z11 !s100 `e[VnzfJoQ3oNOVMlUf6C3
+!s85 0
+Z12 !s108 1591241690.804000
+Z13 !s107 TextDisplay.vo|
+!s101 -O0
+vTextDisplay_vlg_check_tst
+!i10b 1
+Z14 !s100 3hP:4i]9E[zfOU<H>8Cm50
+Z15 IA4PzRb<Nbk]FIAJI3dPN^0
+Z16 VE06?9PZl7h5SDHRfb64nH0
+R3
+R4
+Z17 8TextDisplay.vt
+Z18 FTextDisplay.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z19 !s108 1591241690.913000
+Z20 !s107 TextDisplay.vt|
+Z21 !s90 -work|work|TextDisplay.vt|
+!s101 -O0
+R9
+Z22 n@text@display_vlg_check_tst
+vTextDisplay_vlg_sample_tst
+!i10b 1
+Z23 !s100 0RU_3gRg;2OfRQn@U[Sgb2
+Z24 Ia2AFMhWPT`>529ONBEjmH1
+Z25 Vc_2ZCUYT<fNDI[kBkhioP1
+R3
+R4
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@text@display_vlg_sample_tst
+vTextDisplay_vlg_vec_tst
+!i10b 1
+Z27 !s100 e92c>UGfHXB:fmOgz<4f^2
+Z28 IZca@M[4Wk8^N>1FJzfWCE3
+Z29 VHBB?3bh9G;a?A7i8Zla6Z2
+R3
+R4
+R17
+R18
+Z30 L0 159
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z31 n@text@display_vlg_vec_tst

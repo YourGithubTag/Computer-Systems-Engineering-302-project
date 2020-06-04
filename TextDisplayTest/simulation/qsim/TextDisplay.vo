@@ -1,0 +1,515 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Web Edition"
+
+// DATE "06/04/2020 15:34:49"
+
+// 
+// Device: Altera EP3C16F484C6 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module TextDisplay (
+	clk,
+	vert_sync,
+	pixel_row,
+	pixel_col,
+	pixel_on);
+input 	clk;
+input 	vert_sync;
+input 	[9:0] pixel_row;
+input 	[9:0] pixel_col;
+output 	pixel_on;
+
+// Design Ports Information
+// vert_sync	=>  Location: PIN_E12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[3]	=>  Location: PIN_F14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[4]	=>  Location: PIN_L6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[5]	=>  Location: PIN_AB10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[6]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[7]	=>  Location: PIN_V8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[8]	=>  Location: PIN_R10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[9]	=>  Location: PIN_P17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[3]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[4]	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[5]	=>  Location: PIN_H17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[6]	=>  Location: PIN_U12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[7]	=>  Location: PIN_R11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[8]	=>  Location: PIN_H16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[9]	=>  Location: PIN_U8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_on	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[0]	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[1]	=>  Location: PIN_Y8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_col[2]	=>  Location: PIN_W8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[0]	=>  Location: PIN_V9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[1]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pixel_row[2]	=>  Location: PIN_T11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("TextDisplay_v.sdo");
+// synopsys translate_on
+
+wire \welcome_text|Mux0~2_combout ;
+wire \vert_sync~input_o ;
+wire \pixel_row[3]~input_o ;
+wire \pixel_row[4]~input_o ;
+wire \pixel_row[5]~input_o ;
+wire \pixel_row[6]~input_o ;
+wire \pixel_row[7]~input_o ;
+wire \pixel_row[8]~input_o ;
+wire \pixel_row[9]~input_o ;
+wire \pixel_col[3]~input_o ;
+wire \pixel_col[4]~input_o ;
+wire \pixel_col[5]~input_o ;
+wire \pixel_col[6]~input_o ;
+wire \pixel_col[7]~input_o ;
+wire \pixel_col[8]~input_o ;
+wire \pixel_col[9]~input_o ;
+wire \pixel_on~output_o ;
+wire \clk~input_o ;
+wire \clk~inputclkctrl_outclk ;
+wire \pixel_row[0]~input_o ;
+wire \pixel_row[1]~input_o ;
+wire \pixel_row[2]~input_o ;
+wire \pixel_col[1]~input_o ;
+wire \welcome_text|Mux0~3_combout ;
+wire \pixel_col[2]~input_o ;
+wire \pixel_col[0]~input_o ;
+wire \welcome_text|Mux0~0_combout ;
+wire \welcome_text|Mux0~1_combout ;
+wire \welcome_text|Mux0~4_combout ;
+wire [7:0] \welcome_text|altsyncram_component|auto_generated|q_a ;
+
+wire [17:0] \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ;
+
+assign \welcome_text|altsyncram_component|auto_generated|q_a [0] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [0];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [1] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [1];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [2] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [2];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [3] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [3];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [4] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [4];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [5] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [5];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [6] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [6];
+assign \welcome_text|altsyncram_component|auto_generated|q_a [7] = \welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [7];
+
+// Location: M9K_X13_Y2_N0
+cycloneiii_ram_block \welcome_text|altsyncram_component|auto_generated|ram_block1a0 (
+	.portawe(vcc),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clk~inputclkctrl_outclk ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.portadatain(18'b000000000000000000),
+	.portaaddr({\pixel_row[2]~input_o ,\pixel_row[1]~input_o ,\pixel_row[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(18'b000000000000000000),
+	.portbaddr(3'b000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\welcome_text|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ),
+	.portbdataout());
+// synopsys translate_off
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_offset_in_bits = 1;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .init_file = "tcgrom.mif";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .init_file_layout = "port_a";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "char_rom:welcome_text|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .operation_mode = "rom";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_clear = "none";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_width = 3;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_byte_enable_clock = "none";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_out_clear = "none";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_out_clock = "none";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_width = 18;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_first_address = 0;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_first_bit_number = 0;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_last_address = 7;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 512;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_logical_ram_width = 8;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_read_during_write_mode = "new_data_with_nbe_read";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_a_write_enable_clock = "none";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_b_address_width = 3;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .port_b_data_width = 18;
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .ram_block_type = "M9K";
+defparam \welcome_text|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = 144'h000000063001DC007F001AC00630018C0063;
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y2_N12
+cycloneiii_lcell_comb \welcome_text|Mux0~2 (
+// Equation(s):
+// \welcome_text|Mux0~2_combout  = (\pixel_col[1]~input_o  & (((\pixel_col[0]~input_o )))) # (!\pixel_col[1]~input_o  & ((\pixel_col[0]~input_o  & ((\welcome_text|altsyncram_component|auto_generated|q_a [6]))) # (!\pixel_col[0]~input_o  & 
+// (\welcome_text|altsyncram_component|auto_generated|q_a [7]))))
+
+	.dataa(\welcome_text|altsyncram_component|auto_generated|q_a [7]),
+	.datab(\pixel_col[1]~input_o ),
+	.datac(\welcome_text|altsyncram_component|auto_generated|q_a [6]),
+	.datad(\pixel_col[0]~input_o ),
+	.cin(gnd),
+	.combout(\welcome_text|Mux0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \welcome_text|Mux0~2 .lut_mask = 16'hFC22;
+defparam \welcome_text|Mux0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N9
+cycloneiii_io_obuf \pixel_on~output (
+	.i(\welcome_text|Mux0~4_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\pixel_on~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \pixel_on~output .bus_hold = "false";
+defparam \pixel_on~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y14_N1
+cycloneiii_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+cycloneiii_clkctrl \clk~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clk~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clk~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clk~inputclkctrl .clock_type = "global clock";
+defparam \clk~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X14_Y0_N22
+cycloneiii_io_ibuf \pixel_row[0]~input (
+	.i(pixel_row[0]),
+	.ibar(gnd),
+	.o(\pixel_row[0]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[0]~input .bus_hold = "false";
+defparam \pixel_row[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X14_Y0_N8
+cycloneiii_io_ibuf \pixel_row[1]~input (
+	.i(pixel_row[1]),
+	.ibar(gnd),
+	.o(\pixel_row[1]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[1]~input .bus_hold = "false";
+defparam \pixel_row[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N15
+cycloneiii_io_ibuf \pixel_row[2]~input (
+	.i(pixel_row[2]),
+	.ibar(gnd),
+	.o(\pixel_row[2]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[2]~input .bus_hold = "false";
+defparam \pixel_row[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N1
+cycloneiii_io_ibuf \pixel_col[1]~input (
+	.i(pixel_col[1]),
+	.ibar(gnd),
+	.o(\pixel_col[1]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[1]~input .bus_hold = "false";
+defparam \pixel_col[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y2_N6
+cycloneiii_lcell_comb \welcome_text|Mux0~3 (
+// Equation(s):
+// \welcome_text|Mux0~3_combout  = (\welcome_text|Mux0~2_combout  & (((\welcome_text|altsyncram_component|auto_generated|q_a [4]) # (!\pixel_col[1]~input_o )))) # (!\welcome_text|Mux0~2_combout  & (\welcome_text|altsyncram_component|auto_generated|q_a [5] & 
+// (\pixel_col[1]~input_o )))
+
+	.dataa(\welcome_text|Mux0~2_combout ),
+	.datab(\welcome_text|altsyncram_component|auto_generated|q_a [5]),
+	.datac(\pixel_col[1]~input_o ),
+	.datad(\welcome_text|altsyncram_component|auto_generated|q_a [4]),
+	.cin(gnd),
+	.combout(\welcome_text|Mux0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \welcome_text|Mux0~3 .lut_mask = 16'hEA4A;
+defparam \welcome_text|Mux0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N22
+cycloneiii_io_ibuf \pixel_col[2]~input (
+	.i(pixel_col[2]),
+	.ibar(gnd),
+	.o(\pixel_col[2]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[2]~input .bus_hold = "false";
+defparam \pixel_col[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N15
+cycloneiii_io_ibuf \pixel_col[0]~input (
+	.i(pixel_col[0]),
+	.ibar(gnd),
+	.o(\pixel_col[0]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[0]~input .bus_hold = "false";
+defparam \pixel_col[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y2_N24
+cycloneiii_lcell_comb \welcome_text|Mux0~0 (
+// Equation(s):
+// \welcome_text|Mux0~0_combout  = (\pixel_col[0]~input_o  & (((\pixel_col[1]~input_o )))) # (!\pixel_col[0]~input_o  & ((\pixel_col[1]~input_o  & ((\welcome_text|altsyncram_component|auto_generated|q_a [1]))) # (!\pixel_col[1]~input_o  & 
+// (\welcome_text|altsyncram_component|auto_generated|q_a [3]))))
+
+	.dataa(\pixel_col[0]~input_o ),
+	.datab(\welcome_text|altsyncram_component|auto_generated|q_a [3]),
+	.datac(\pixel_col[1]~input_o ),
+	.datad(\welcome_text|altsyncram_component|auto_generated|q_a [1]),
+	.cin(gnd),
+	.combout(\welcome_text|Mux0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \welcome_text|Mux0~0 .lut_mask = 16'hF4A4;
+defparam \welcome_text|Mux0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y2_N2
+cycloneiii_lcell_comb \welcome_text|Mux0~1 (
+// Equation(s):
+// \welcome_text|Mux0~1_combout  = (\pixel_col[0]~input_o  & ((\welcome_text|Mux0~0_combout  & (\welcome_text|altsyncram_component|auto_generated|q_a [0])) # (!\welcome_text|Mux0~0_combout  & ((\welcome_text|altsyncram_component|auto_generated|q_a [2]))))) # 
+// (!\pixel_col[0]~input_o  & (((\welcome_text|Mux0~0_combout ))))
+
+	.dataa(\welcome_text|altsyncram_component|auto_generated|q_a [0]),
+	.datab(\pixel_col[0]~input_o ),
+	.datac(\welcome_text|altsyncram_component|auto_generated|q_a [2]),
+	.datad(\welcome_text|Mux0~0_combout ),
+	.cin(gnd),
+	.combout(\welcome_text|Mux0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \welcome_text|Mux0~1 .lut_mask = 16'hBBC0;
+defparam \welcome_text|Mux0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y2_N8
+cycloneiii_lcell_comb \welcome_text|Mux0~4 (
+// Equation(s):
+// \welcome_text|Mux0~4_combout  = (\pixel_col[2]~input_o  & ((\welcome_text|Mux0~1_combout ))) # (!\pixel_col[2]~input_o  & (\welcome_text|Mux0~3_combout ))
+
+	.dataa(\welcome_text|Mux0~3_combout ),
+	.datab(\pixel_col[2]~input_o ),
+	.datac(gnd),
+	.datad(\welcome_text|Mux0~1_combout ),
+	.cin(gnd),
+	.combout(\welcome_text|Mux0~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \welcome_text|Mux0~4 .lut_mask = 16'hEE22;
+defparam \welcome_text|Mux0~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y29_N15
+cycloneiii_io_ibuf \vert_sync~input (
+	.i(vert_sync),
+	.ibar(gnd),
+	.o(\vert_sync~input_o ));
+// synopsys translate_off
+defparam \vert_sync~input .bus_hold = "false";
+defparam \vert_sync~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X37_Y29_N1
+cycloneiii_io_ibuf \pixel_row[3]~input (
+	.i(pixel_row[3]),
+	.ibar(gnd),
+	.o(\pixel_row[3]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[3]~input .bus_hold = "false";
+defparam \pixel_row[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y13_N1
+cycloneiii_io_ibuf \pixel_row[4]~input (
+	.i(pixel_row[4]),
+	.ibar(gnd),
+	.o(\pixel_row[4]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[4]~input .bus_hold = "false";
+defparam \pixel_row[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y0_N29
+cycloneiii_io_ibuf \pixel_row[5]~input (
+	.i(pixel_row[5]),
+	.ibar(gnd),
+	.o(\pixel_row[5]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[5]~input .bus_hold = "false";
+defparam \pixel_row[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y0_N29
+cycloneiii_io_ibuf \pixel_row[6]~input (
+	.i(pixel_row[6]),
+	.ibar(gnd),
+	.o(\pixel_row[6]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[6]~input .bus_hold = "false";
+defparam \pixel_row[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N29
+cycloneiii_io_ibuf \pixel_row[7]~input (
+	.i(pixel_row[7]),
+	.ibar(gnd),
+	.o(\pixel_row[7]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[7]~input .bus_hold = "false";
+defparam \pixel_row[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y0_N15
+cycloneiii_io_ibuf \pixel_row[8]~input (
+	.i(pixel_row[8]),
+	.ibar(gnd),
+	.o(\pixel_row[8]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[8]~input .bus_hold = "false";
+defparam \pixel_row[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y7_N8
+cycloneiii_io_ibuf \pixel_row[9]~input (
+	.i(pixel_row[9]),
+	.ibar(gnd),
+	.o(\pixel_row[9]~input_o ));
+// synopsys translate_off
+defparam \pixel_row[9]~input .bus_hold = "false";
+defparam \pixel_row[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X14_Y29_N8
+cycloneiii_io_ibuf \pixel_col[3]~input (
+	.i(pixel_col[3]),
+	.ibar(gnd),
+	.o(\pixel_col[3]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[3]~input .bus_hold = "false";
+defparam \pixel_col[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y4_N15
+cycloneiii_io_ibuf \pixel_col[4]~input (
+	.i(pixel_col[4]),
+	.ibar(gnd),
+	.o(\pixel_col[4]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[4]~input .bus_hold = "false";
+defparam \pixel_col[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y25_N1
+cycloneiii_io_ibuf \pixel_col[5]~input (
+	.i(pixel_col[5]),
+	.ibar(gnd),
+	.o(\pixel_col[5]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[5]~input .bus_hold = "false";
+defparam \pixel_col[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X26_Y0_N1
+cycloneiii_io_ibuf \pixel_col[6]~input (
+	.i(pixel_col[6]),
+	.ibar(gnd),
+	.o(\pixel_col[6]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[6]~input .bus_hold = "false";
+defparam \pixel_col[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X3_Y0_N1
+cycloneiii_io_ibuf \pixel_col[7]~input (
+	.i(pixel_col[7]),
+	.ibar(gnd),
+	.o(\pixel_col[7]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[7]~input .bus_hold = "false";
+defparam \pixel_col[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y24_N15
+cycloneiii_io_ibuf \pixel_col[8]~input (
+	.i(pixel_col[8]),
+	.ibar(gnd),
+	.o(\pixel_col[8]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[8]~input .bus_hold = "false";
+defparam \pixel_col[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X3_Y0_N15
+cycloneiii_io_ibuf \pixel_col[9]~input (
+	.i(pixel_col[9]),
+	.ibar(gnd),
+	.o(\pixel_col[9]~input_o ));
+// synopsys translate_off
+defparam \pixel_col[9]~input .bus_hold = "false";
+defparam \pixel_col[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign pixel_on = \pixel_on~output_o ;
+
+endmodule
