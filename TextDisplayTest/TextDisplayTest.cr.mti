@@ -1,0 +1,73 @@
+D:/TextDisplayTest/TextDisplay.vhd {0 {vcom -work work -2002 -explicit {D:\TextDisplayTest\TextDisplay.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package MATH_REAL
+-- Loading package std_logic_textio
+-- Compiling entity TextDisplay
+-- Compiling architecture behaviour of TextDisplay
+** Warning: D:\TextDisplayTest\TextDisplay.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+** Error: D:\TextDisplayTest\TextDisplay.vhd(57): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(57): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(58): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(58): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(61): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(61): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(65): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(65): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(66): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_ULOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(31)
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_LOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(37)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(66): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(69): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(69): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(70): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_ULOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(31)
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_LOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(37)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(70): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(73): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, BIT_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(126)
+      (explicit) TEXTIO.WRITE[std.TEXTIO.LINE, std.STANDARD.STRING, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(145)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(73): No feasible entries for subprogram "WRITE".
+** Error: D:\TextDisplayTest\TextDisplay.vhd(74): Subprogram "WRITE" is ambiguous.
+   Feasible subprograms are:
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_ULOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(31)
+      (explicit) std_logic_textio.WRITE[std.TEXTIO.LINE, STD_LOGIC_VECTOR, std.TEXTIO.SIDE, NATURAL] at $MODEL_TECH/../vhdl_src/synopsys/std_logic_textio.vhd(37)
+** Error: D:\TextDisplayTest\TextDisplay.vhd(74): No feasible entries for subprogram "WRITE".
+** Warning: [9] D:\TextDisplayTest\TextDisplay.vhd(20): (vcom-1013) Initial value of "vsync" depends on value of signal "vert_sync".
+
+** Error: D:\TextDisplayTest\TextDisplay.vhd(81): VHDL Compiler exiting
+
+} {14.0 15.0 18.0 20.0 23.0 25.0 28.0 30.0 33.0 35.0 38.0 40.0 43.0 45.0 48.0 50.0 53.0 55.0 58.0 59.0 61.0 62.0} {}} D:/TextDisplayTest/char_rom.vhd {1 {vcom -work work -2002 -explicit {D:\TextDisplayTest\char_rom.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity char_rom
+-- Compiling architecture SYN of char_rom
+
+} {} {}}
