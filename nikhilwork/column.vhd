@@ -7,7 +7,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 ENTITY column IS
 	PORT(	SIGNAL clock, vert_sync					: IN	STD_LOGIC;
 			SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
-			SIGNAL randomVal							: IN std_logic_vector(8 DOWNTO 0);
+			SIGNAL randomVal							: IN std_logic_vector(9 DOWNTO 0);
 			SIGNAL game_state							: IN std_logic_vector(3 downto 0);
 			SIGNAL pipe_onOut							: OUT	STD_LOGIC
 			);
@@ -15,15 +15,15 @@ END column;
 
 architecture behaviour of column is
 signal col1_x, col1_x_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(200, 10);
-signal col1_y, col1_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(300, 10);
+signal col1_y, col1_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(349, 10);
 
 signal col2_x, col2_x_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(600, 10);
-signal col2_y, col2_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(300, 10);
+signal col2_y, col2_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(349, 10);
 
 signal col3_x, col3_x_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(400, 10);
-signal col3_y, col3_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(300, 10);
+signal col3_y, col3_y_next: std_logic_vector(9 downto 0) := conv_std_logic_vector(349, 10);
 
-signal randomValInt: 		 std_logic_vector(8 DOWNTO 0);
+signal randomValInt: 		 std_logic_vector(9 DOWNTO 0);
 
 signal col1_xbounds, col2_xbounds, col3_xbounds, screenBounds: STD_LOGIC := '0';
 signal pipe_on: STD_LOGIC;
@@ -41,7 +41,7 @@ if rising_edge(vert_sync) then
 				col1_x_next <= col1_x - 1;
 			elsif (col1_xbounds = '1') then
 				col1_x_next <= conv_std_logic_vector(700, 10);
-				col1_y_next <= '0' & randomValInt;
+				col1_y_next <= randomValInt;
 			end if;
 			
 			col1_x <= col1_x_next;
@@ -51,7 +51,7 @@ if rising_edge(vert_sync) then
 				col2_x_next <= col2_x - 1; 
 			elsif (col2_xbounds = '1') then
 				col2_x_next <= conv_std_logic_vector(700, 10);
-				col2_y_next <= '0' & randomValInt;
+				col2_y_next <= randomValInt;
 			end if;
 			
 				col2_x <= col2_x_next;
@@ -61,7 +61,7 @@ if rising_edge(vert_sync) then
 				col3_x_next <= col3_x - 1; 
 			elsif (col3_xbounds = '1') then
 				col3_x_next <= conv_std_logic_vector(700, 10);
-				col3_y_next <= '0' & randomValInt;
+				col3_y_next <= randomValInt;
 			end if; 
 			
 			col3_x <= col3_x_next;
@@ -97,11 +97,14 @@ end process columnMove;
 randomassign: process (vert_sync)
 begin
 if rising_edge(vert_sync) then
-	if (randomVal >= 350) then 
-		randomValInt <=  conv_std_logic_vector(300, 9);
+	if ((randomVal < 110) or (randomVal < 5)) then 
+		randomValInt <=  conv_std_logic_vector(110, 10);
+	elsif ((randomVal > 250) or (randomVal > 430)) then 
+		randomValInt <=  conv_std_logic_vector(349, 10);
 	end if;
-	randomValInt <= randomVal + 50;
+	randomValInt <= randomVal;
 end if;
+
 end process randomassign;
 
 	
