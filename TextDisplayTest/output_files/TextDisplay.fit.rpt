@@ -1,5 +1,5 @@
 Fitter report for TextDisplay
-Thu Jun 04 22:27:22 2020
+Thu Jun 04 23:15:29 2020
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jun 04 22:27:22 2020      ;
+; Fitter Status                      ; Successful - Thu Jun 04 23:15:29 2020      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; TextDisplay                                ;
 ; Top-level Entity Name              ; TextDisplay                                ;
@@ -2008,7 +2008,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2017,8 +2017,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/CompSys302VHDLuProject/TextDisplayTest/output_files/TextDisplay.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4900 megabytes
-    Info: Processing ended: Thu Jun 04 22:27:22 2020
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Thu Jun 04 23:15:29 2020
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TextDisplay
-Thu Jun 04 22:27:28 2020
+Thu Jun 04 23:15:35 2020
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jun 04 22:27:28 2020 ;
+; EDA Netlist Writer Status ; Successful - Thu Jun 04 23:15:35 2020 ;
 ; Revision Name             ; TextDisplay                           ;
 ; Top-level Entity Name     ; TextDisplay                           ;
 ; Family                    ; Cyclone III                           ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 04 22:27:27 2020
+    Info: Processing started: Thu Jun 04 23:15:34 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off TextDisplay -c TextDisplay
 Info (204019): Generated file TextDisplay_6_1200mv_85c_slow.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file TextDisplay_6_1200mv_0c_slow.vo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
@@ -100,7 +100,7 @@ Info (204019): Generated file TextDisplay_min_1200mv_0c_v_fast.sdo in folder "D:
 Info (204019): Generated file TextDisplay_v.sdo in folder "D:/CompSys302VHDLuProject/TextDisplayTest/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Thu Jun 04 22:27:28 2020
+    Info: Processing ended: Thu Jun 04 23:15:35 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

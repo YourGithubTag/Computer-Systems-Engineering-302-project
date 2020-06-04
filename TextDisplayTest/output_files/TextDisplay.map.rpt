@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TextDisplay
-Thu Jun 04 22:27:15 2020
+Thu Jun 04 23:49:13 2020
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,18 +10,7 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for char_rom:text_out|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
- 13. Parameter Settings for User Entity Instance: char_rom:text_out|altsyncram:altsyncram_component
- 14. altsyncram Parameter Settings by Entity Instance
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -47,20 +36,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 04 22:27:15 2020      ;
+; Analysis & Synthesis Status        ; Failed - Thu Jun 04 23:49:13 2020          ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; TextDisplay                                ;
 ; Top-level Entity Name              ; TextDisplay                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 44                                         ;
-;     Total combinational functions  ; 44                                         ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 91                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 4,096                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -162,226 +151,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; D:/CompSys302VHDLuProject/TextDisplayTest/char_rom.vhd               ;         ;
-; TextDisplay.vhd                  ; yes             ; User VHDL File                         ; D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_kt91.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/CompSys302VHDLuProject/TextDisplayTest/db/altsyncram_kt91.tdf     ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; D:/CompSys302VHDLuProject/TextDisplayTest/tcgrom.mif                 ;         ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 44                 ;
-;                                             ;                    ;
-; Total combinational functions               ; 44                 ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 28                 ;
-;     -- 3 input functions                    ; 15                 ;
-;     -- <=2 input functions                  ; 1                  ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 44                 ;
-;     -- arithmetic mode                      ; 0                  ;
-;                                             ;                    ;
-; Total registers                             ; 0                  ;
-;     -- Dedicated logic registers            ; 0                  ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 91                 ;
-; Total memory bits                           ; 4096               ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-; Maximum fan-out node                        ; pixel_col[5]~input ;
-; Maximum fan-out                             ; 15                 ;
-; Total fan-out                               ; 331                ;
-; Average fan-out                             ; 1.41               ;
-+---------------------------------------------+--------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |TextDisplay                              ; 44 (39)           ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 91   ; 0            ; |TextDisplay                                                                                  ;              ;
-;    |char_rom:text_out|                    ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TextDisplay|char_rom:text_out                                                                ;              ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TextDisplay|char_rom:text_out|altsyncram:altsyncram_component                                ;              ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TextDisplay|char_rom:text_out|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                          ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-; char_rom:text_out|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; characters[0]                                      ; Equal0              ; yes                    ;
-; characters[1]                                      ; Equal0              ; yes                    ;
-; characters[2]                                      ; Equal0              ; yes                    ;
-; characters[3]                                      ; Equal0              ; yes                    ;
-; characters[4]                                      ; Equal0              ; yes                    ;
-; characters[5]                                      ; Equal0              ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 34:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |TextDisplay|characters    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------+
-; Source assignments for char_rom:text_out|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                        ;
-+---------------------------------+--------------------+------+-------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
-+---------------------------------+--------------------+------+-------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: char_rom:text_out|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+------------------------------------+
-; Parameter Name                     ; Value                ; Type                               ;
-+------------------------------------+----------------------+------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                            ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                         ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                       ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                       ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                     ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                            ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                            ;
-; WIDTH_A                            ; 8                    ; Signed Integer                     ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer                     ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer                     ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                            ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                            ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                            ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                            ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                            ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                            ;
-; WIDTH_B                            ; 1                    ; Untyped                            ;
-; WIDTHAD_B                          ; 1                    ; Untyped                            ;
-; NUMWORDS_B                         ; 1                    ; Untyped                            ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                            ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                            ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                            ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                            ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                            ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                            ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                            ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                            ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                            ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                            ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                            ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                     ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                            ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                            ;
-; BYTE_SIZE                          ; 8                    ; Untyped                            ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                            ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                            ;
-; INIT_FILE                          ; tcgrom.mif           ; Untyped                            ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                            ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                            ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                            ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                            ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                            ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                            ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                            ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                            ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                            ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                            ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                            ;
-; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                            ;
-; CBXI_PARAMETER                     ; altsyncram_kt91      ; Untyped                            ;
-+------------------------------------+----------------------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                              ;
-+-------------------------------------------+---------------------------------------------------+
-; Name                                      ; Value                                             ;
-+-------------------------------------------+---------------------------------------------------+
-; Number of entity instances                ; 1                                                 ;
-; Entity Instance                           ; char_rom:text_out|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                               ;
-;     -- WIDTH_A                            ; 8                                                 ;
-;     -- NUMWORDS_A                         ; 512                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                      ;
-;     -- WIDTH_B                            ; 1                                                 ;
-;     -- NUMWORDS_B                         ; 1                                                 ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                            ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                      ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                              ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                         ;
-+-------------------------------------------+---------------------------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 04 22:27:13 2020
+    Info: Processing started: Thu Jun 04 23:49:11 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TextDisplay -c TextDisplay
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
@@ -391,268 +167,283 @@ Info (12021): Found 2 design units, including 1 entities, in source file textdis
     Info (12022): Found design unit 1: TextDisplay-behaviour
     Info (12023): Found entity 1: TextDisplay
 Info (12127): Elaborating entity "TextDisplay" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(24): used explicit default value for signal "welcome_to_flappy_bird" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(25): used explicit default value for signal "training_text" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(26): used explicit default value for signal "single_player_text" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(29): used explicit default value for signal "game_over_text" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(48): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(49): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(49): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(50): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(52): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(52): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(53): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(55): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(55): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(56): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(58): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(58): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(59): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(61): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(61): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(62): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(64): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(64): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(65): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(67): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(67): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(68): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(70): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(70): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(71): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(73): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(73): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(74): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(76): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(76): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(77): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(79): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(79): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(80): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(82): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(82): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(83): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(85): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(85): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(86): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(88): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(88): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(89): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(91): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(91): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(92): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(94): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(94): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(95): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(97): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(97): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(98): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(100): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(100): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(101): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(103): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(103): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(104): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(106): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(106): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(107): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(109): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(109): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(110): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(112): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(112): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(113): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(45): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(124): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(125): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(125): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(128): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(128): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(131): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(131): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(134): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(134): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(137): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(137): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(140): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(140): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(143): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(143): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(146): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(146): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(149): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(149): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(152): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(152): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(155): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(155): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(158): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(158): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(161): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(161): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(164): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(164): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(167): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(167): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(170): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(170): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(173): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(173): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(176): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(176): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(186): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(187): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(187): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(190): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(190): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(193): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(193): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(196): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(196): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(199): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(199): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(202): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(202): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(205): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(205): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(208): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(208): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(211): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(211): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(214): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(214): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(217): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(217): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(220): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(220): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(223): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(223): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(264): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(265): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(265): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(268): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(268): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(271): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(271): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(274): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(274): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(277): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(277): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(280): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(280): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(283): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(283): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(286): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(286): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(289): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at TextDisplay.vhd(289): comparison between unequal length operands always returns FALSE
-Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(45)
-Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(45)
-Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(45)
-Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(45)
-Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(45)
-Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(45)
-Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:text_out"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:text_out|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "char_rom:text_out|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "char_rom:text_out|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "tcgrom.mif"
-    Info (12134): Parameter "intended_device_family" = "Cyclone III"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "512"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "9"
-    Info (12134): Parameter "width_a" = "8"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
-    Info (12023): Found entity 1: altsyncram_kt91
-Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:text_out|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 67 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "vert_sync"
-    Warning (15610): No output dependent on input pin "hit_points[0]"
-    Warning (15610): No output dependent on input pin "hit_points[1]"
-    Warning (15610): No output dependent on input pin "hit_points[2]"
-    Warning (15610): No output dependent on input pin "hit_points[3]"
-    Warning (15610): No output dependent on input pin "hit_points[4]"
-    Warning (15610): No output dependent on input pin "hit_points[5]"
-    Warning (15610): No output dependent on input pin "hit_points[6]"
-    Warning (15610): No output dependent on input pin "hit_points[7]"
-    Warning (15610): No output dependent on input pin "hit_points[8]"
-    Warning (15610): No output dependent on input pin "hit_points[9]"
-    Warning (15610): No output dependent on input pin "hit_points[10]"
-    Warning (15610): No output dependent on input pin "hit_points[11]"
-    Warning (15610): No output dependent on input pin "hit_points[12]"
-    Warning (15610): No output dependent on input pin "hit_points[13]"
-    Warning (15610): No output dependent on input pin "hit_points[14]"
-    Warning (15610): No output dependent on input pin "hit_points[15]"
-    Warning (15610): No output dependent on input pin "hit_points[16]"
-    Warning (15610): No output dependent on input pin "hit_points[17]"
-    Warning (15610): No output dependent on input pin "hit_points[18]"
-    Warning (15610): No output dependent on input pin "hit_points[19]"
-    Warning (15610): No output dependent on input pin "hit_points[20]"
-    Warning (15610): No output dependent on input pin "hit_points[21]"
-    Warning (15610): No output dependent on input pin "hit_points[22]"
-    Warning (15610): No output dependent on input pin "hit_points[23]"
-    Warning (15610): No output dependent on input pin "hit_points[24]"
-    Warning (15610): No output dependent on input pin "hit_points[25]"
-    Warning (15610): No output dependent on input pin "hit_points[26]"
-    Warning (15610): No output dependent on input pin "hit_points[27]"
-    Warning (15610): No output dependent on input pin "hit_points[28]"
-    Warning (15610): No output dependent on input pin "hit_points[29]"
-    Warning (15610): No output dependent on input pin "hit_points[30]"
-    Warning (15610): No output dependent on input pin "hit_points[31]"
-    Warning (15610): No output dependent on input pin "score[0]"
-    Warning (15610): No output dependent on input pin "score[1]"
-    Warning (15610): No output dependent on input pin "score[2]"
-    Warning (15610): No output dependent on input pin "score[3]"
-    Warning (15610): No output dependent on input pin "score[4]"
-    Warning (15610): No output dependent on input pin "score[5]"
-    Warning (15610): No output dependent on input pin "score[6]"
-    Warning (15610): No output dependent on input pin "score[7]"
-    Warning (15610): No output dependent on input pin "score[8]"
-    Warning (15610): No output dependent on input pin "score[9]"
-    Warning (15610): No output dependent on input pin "score[10]"
-    Warning (15610): No output dependent on input pin "score[11]"
-    Warning (15610): No output dependent on input pin "score[12]"
-    Warning (15610): No output dependent on input pin "score[13]"
-    Warning (15610): No output dependent on input pin "score[14]"
-    Warning (15610): No output dependent on input pin "score[15]"
-    Warning (15610): No output dependent on input pin "score[16]"
-    Warning (15610): No output dependent on input pin "score[17]"
-    Warning (15610): No output dependent on input pin "score[18]"
-    Warning (15610): No output dependent on input pin "score[19]"
-    Warning (15610): No output dependent on input pin "score[20]"
-    Warning (15610): No output dependent on input pin "score[21]"
-    Warning (15610): No output dependent on input pin "score[22]"
-    Warning (15610): No output dependent on input pin "score[23]"
-    Warning (15610): No output dependent on input pin "score[24]"
-    Warning (15610): No output dependent on input pin "score[25]"
-    Warning (15610): No output dependent on input pin "score[26]"
-    Warning (15610): No output dependent on input pin "score[27]"
-    Warning (15610): No output dependent on input pin "score[28]"
-    Warning (15610): No output dependent on input pin "score[29]"
-    Warning (15610): No output dependent on input pin "score[30]"
-    Warning (15610): No output dependent on input pin "score[31]"
-    Warning (15610): No output dependent on input pin "pixel_row[0]"
-    Warning (15610): No output dependent on input pin "pixel_col[0]"
-Info (21057): Implemented 143 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 90 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 44 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 224 warnings
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Thu Jun 04 22:27:15 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(23): used explicit default value for signal "welcome_to_flappy_bird" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(24): used explicit default value for signal "training_text" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(25): used explicit default value for signal "single_player_text" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(26): used explicit default value for signal "score_text" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(27): used explicit default value for signal "pause_text" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at TextDisplay.vhd(28): used explicit default value for signal "game_over_text" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(47): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(48): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(48): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(49): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(51): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(51): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(52): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(54): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(54): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(55): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(57): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(57): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(58): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(60): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(60): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(61): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(63): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(63): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(64): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(66): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(66): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(67): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(69): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(69): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(70): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(72): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(72): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(73): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(75): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(75): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(76): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(78): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(78): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(79): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(81): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(81): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(82): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(84): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(84): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(85): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(87): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(87): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(88): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(90): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(90): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(91): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(93): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(93): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(94): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(96): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(96): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(97): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(99): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(99): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(100): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(102): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(102): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(103): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(105): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(105): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(106): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(108): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(108): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(109): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(111): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(111): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(112): signal "welcome_to_flappy_bird" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(44): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(123): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(124): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(124): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(127): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(127): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(130): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(130): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(133): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(133): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(136): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(136): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(139): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(139): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(142): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(142): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(145): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(145): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(148): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(148): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(151): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(151): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(154): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(154): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(157): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(157): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(160): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(160): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(163): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(163): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(166): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(166): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(169): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(169): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(172): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(172): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(175): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(175): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(185): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(186): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(186): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(189): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(189): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(192): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(192): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(195): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(195): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(198): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(198): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(201): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(201): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(204): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(204): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(207): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(207): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(210): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(210): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(213): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(213): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(216): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(216): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(219): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(219): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(222): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(222): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(232): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(233): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(233): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(234): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(236): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(236): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(237): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(239): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(239): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(240): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(242): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(242): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(243): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(245): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(245): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(246): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(248): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(248): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(249): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(251): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(251): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(252): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(254): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(254): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(255): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(230): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(263): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(264): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(264): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(267): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(267): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(270): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(270): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(273): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(273): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(276): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(276): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(279): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(279): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(282): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(282): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(285): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(285): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(288): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(288): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(297): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(299): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(299): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(302): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(302): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(305): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(305): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(308): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(308): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(311): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(311): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(314): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at TextDisplay.vhd(314): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(324): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(325): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(325): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(326): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(328): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(330): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(332): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(334): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(336): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(338): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(340): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(342): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(344): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(347): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(347): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(348): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(350): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(352): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(354): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(356): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(358): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(360): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(362): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(364): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(366): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(369): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(369): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(370): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(372): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(374): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(376): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(378): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(380): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(382): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(384): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(386): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(388): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(391): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(391): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(392): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(394): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(396): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(398): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(400): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(402): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(404): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(406): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(408): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(410): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(322): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(322)
+Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(230)
+Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(44)
+Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(44)
+Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(44)
+Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(44)
+Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(44)
+Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(44)
+Error (10028): Can't resolve multiple constant drivers for net "characters[5]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
+Error (10029): Constant driver at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[4]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
+Error (10028): Can't resolve multiple constant drivers for net "characters[3]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
+Error (10028): Can't resolve multiple constant drivers for net "characters[2]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
+Error (10028): Can't resolve multiple constant drivers for net "characters[1]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10029): Constant driver at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
+Error (10028): Can't resolve multiple constant drivers for net "characters[0]" at TextDisplay.vhd(322) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 322
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 9 errors, 247 warnings
+    Error: Peak virtual memory: 4622 megabytes
+    Error: Processing ended: Thu Jun 04 23:49:13 2020
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="TextDisplay">
-		<CBX_INST_ENTRY INSTANCE_NAME="|TextDisplay|char_rom:text_out|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kt91.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

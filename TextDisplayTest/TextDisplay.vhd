@@ -7,8 +7,8 @@ use ieee.std_logic_arith.all;
 use std.textio.all;
 
 entity TextDisplay is
-port (signal clk, vert_sync : in std_logic;
-		signal hit_points, score : in integer;
+port (signal clk : in std_logic;
+		signal score3, score2, score1, score0 : in std_logic_vector(3 downto 0);
 		signal game_state : in std_logic_vector(3 downto 0);
 		signal pixel_row, pixel_col : in std_logic_vector (9 downto 0);
 		signal pixel_on : out std_logic
@@ -18,7 +18,6 @@ end entity TextDisplay;
 architecture behaviour of TextDisplay is
 signal ispixelon : std_logic := '0';
 signal characters : STD_LOGIC_VECTOR (5 downto 0) := "100000";
-signal vsync : std_LOGIC := vert_sync;
 
 type sentence is array (0 to 31) of std_logic_vector(5 downto 0);
 signal welcome_to_flappy_bird : sentence := ("010111","000101","001100","000011","001111","001101","000101","100000","010100","001111","100000","000110","001100","000001","010000","010000","011001","100000","000010","001001","010010","000100","100000","100000","100000","100000","100000","100000","100000","100000","100000","100000"); 
@@ -46,70 +45,70 @@ main_menu : process(clk)
 begin 
 -- Displaying 'Welcome to Flappy Bird' Main Menu
 	if (game_state = "0000") then
-		if ((pixel_row (9 downto 4) = "001111") and (pixel_col(9 downto 4) = "000100")) then
+		if ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "000100")) then
 		characters <= welcome_to_flappy_bird(0);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "000101")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "000101")) then
 		characters <= welcome_to_flappy_bird(1);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "000110")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "000110")) then
 		characters <= welcome_to_flappy_bird(2);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "000111")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "000111")) then
 		characters <= welcome_to_flappy_bird(3);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001000")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001000")) then
 		characters <= welcome_to_flappy_bird(4);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001001")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001001")) then
 		characters <= welcome_to_flappy_bird(5);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001010")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001010")) then
 		characters <= welcome_to_flappy_bird(6);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001011")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001011")) then
 		characters <= welcome_to_flappy_bird(7);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001100")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001100")) then
 		characters <= welcome_to_flappy_bird(8);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001101")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001101")) then
 		characters <= welcome_to_flappy_bird(9);
 	
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001110")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001110")) then
 		characters <= welcome_to_flappy_bird(10);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "001111")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "001111")) then
 		characters <= welcome_to_flappy_bird(11);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010000")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010000")) then
 		characters <= welcome_to_flappy_bird(12);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010001")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010001")) then
 		characters <= welcome_to_flappy_bird(13);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010010")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010010")) then
 		characters <= welcome_to_flappy_bird(14);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010011")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010011")) then
 		characters <= welcome_to_flappy_bird(15);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010100")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010100")) then
 		characters <= welcome_to_flappy_bird(16);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010101")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010101")) then
 		characters <= welcome_to_flappy_bird(17);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "010111")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "010111")) then
 		characters <= welcome_to_flappy_bird(18);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "011000")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "011000")) then
 		characters <= welcome_to_flappy_bird(19);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "011001")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "011001")) then
 		characters <= welcome_to_flappy_bird(20);
 		
-		elsif ((pixel_row (9 downto 4) = "001111") and (pixel_col (9 downto 4) = "011010")) then
+		elsif ((pixel_row(9 downto 4) = "001111") and (pixel_col(9 downto 4) = "011010")) then
 		characters <= welcome_to_flappy_bird(21);
 		
 		else
@@ -227,37 +226,37 @@ begin
 		end if;
 	end process training_mode;
 	
--- Displaying the player score
---score_display : process (clk)
---begin
---	if (game_state = "0101" or game_state = "0110" or game_state = "0111") then
---		if ((pixel_row (9 downto 4) = "010111") and (pixel_col(9 downto 4) = "000000")) then
---		characters <= score_text(0);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000001")) then
---		characters <= score_text(1);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000010")) then
---		characters <= score_text(2);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000011")) then
---		characters <= score_text(3);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000100")) then
---		characters <= score_text(4);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000101")) then
---		characters <= score_text(5);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000110")) then
---		characters <= score_text(6);
---		
---		elsif ((pixel_row (9 downto 4) = "010111") and (pixel_col (9 downto 4) = "000111")) then
---		characters <= score_text(7);
---	end if;
---	end if;
---end process score_display;	
---
+--Displaying the player score
+score_display : process (clk)
+begin
+	if (game_state = "0101" or game_state = "0110" or game_state = "0111") then
+		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000000")) then
+		characters <= score_text(0);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000001")) then
+		characters <= score_text(1);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000010")) then
+		characters <= score_text(2);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000011")) then
+		characters <= score_text(3);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000100")) then
+		characters <= score_text(4);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000101")) then
+		characters <= score_text(5);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000110")) then
+		characters <= score_text(6);
+		
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000111")) then
+		characters <= score_text(7);
+	end if;
+	end if;
+end process score_display;	
+
 -- Displaying text for 'Game Over'	
 game_over : process (clk)
 begin 
@@ -291,8 +290,8 @@ begin
 		end if;
 		end if;
 	end process game_over;
---
--- Displaying text for 	
+
+-- Displaying text for 'Paused'
 pause : process (clk)
 begin
 	if (game_state = "0011" or game_state = "0111") then
@@ -318,9 +317,105 @@ begin
 	end if;	
 	end if;
 end process pause;
-	
+
+--Displaying numerical score
+scorenumber : process (clk)
+begin
+	if (game_state = "0001" or game_state = "0010" or game_state = "0011" or game_state = "0100" or game_state = "0101" or game_state = "0110" or game_state = "0111" or game_state = "1000") then
+		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001000")) then
+			if (score3 = "0000") then
+			characters <= "110000";
+			elsif (score3 = "0001") then
+			characters <= "110001";
+			elsif (score3 = "0010") then
+			characters <= "110010";
+			elsif (score3 = "0011") then
+			characters <= "110011";
+			elsif (score3 = "0100") then
+			characters <= "110100";
+			elsif (score3 = "0101") then
+			characters <= "110101";
+			elsif (score3 = "0110") then
+			characters <= "110110";
+			elsif (score3 = "0111") then
+			characters <= "110111";
+			elsif (score3 = "1000") then
+			characters <= "111000";
+			elsif (score3 = "1001") then
+			characters <= "111001";
+			end if;
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001001")) then
+			if (score2 = "0000") then
+			characters <= "110000";
+			elsif (score2 = "0001") then
+			characters <= "110001";
+			elsif (score2 = "0010") then
+			characters <= "110010";
+			elsif (score2 = "0011") then
+			characters <= "110011";
+			elsif (score2 = "0100") then
+			characters <= "110100";
+			elsif (score2 = "0101") then
+			characters <= "110101";
+			elsif (score2 = "0110") then
+			characters <= "110110";
+			elsif (score2 = "0111") then
+			characters <= "110111";
+			elsif (score2 = "1000") then
+			characters <= "111000";
+			elsif (score2 = "1001") then
+			characters <= "111001";
+			end if;
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001010")) then
+			if (score1 = "0000") then
+			characters <= "110000";
+			elsif (score1 = "0001") then
+			characters <= "110001";
+			elsif (score1 = "0010") then
+			characters <= "110010";
+			elsif (score1 = "0011") then
+			characters <= "110011";
+			elsif (score1 = "0100") then
+			characters <= "110100";
+			elsif (score1 = "0101") then
+			characters <= "110101";
+			elsif (score1 = "0110") then
+			characters <= "110110";
+			elsif (score1 = "0111") then
+			characters <= "110111";
+			elsif (score1 = "1000") then
+			characters <= "111000";
+			elsif (score1 = "1001") then
+			characters <= "111001";
+			end if;
+		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001011")) then
+			if (score0 = "0000") then
+			characters <= "110000";
+			elsif (score0 = "0001") then
+			characters <= "110001";
+			elsif (score0 = "0010") then
+			characters <= "110010";
+			elsif (score0 = "0011") then
+			characters <= "110011";
+			elsif (score0 = "0100") then
+			characters <= "110100";
+			elsif (score0 = "0101") then
+			characters <= "110101";
+			elsif (score0 = "0110") then
+			characters <= "110110";
+			elsif (score0 = "0111") then
+			characters <= "110111";
+			elsif (score0 = "1000") then
+			characters <= "111000";
+			elsif (score0 = "1001") then
+			characters <= "111001";
+			end if;
+		end if;
+	end if;
+end process scorenumber;
+		
 text_out : char_rom port map(character_address => characters, font_row => pixel_row(3 downto 1), font_col => pixel_col(3 downto 1), clock => clk, rom_mux_output => ispixelon);
 pixel_on <= ispixelon;
 
-
+		
 end architecture behaviour;
