@@ -120,7 +120,7 @@ end process main_menu;
 -- Displaying text 'Single Player Mode"
 single_player : process (clk)
 begin 
-	if (game_state = "0100" or game_state = "0101" or game_state = "0110" or game_state = "0111") then
+	if ((game_state = "0100") or (game_state = "0101") or (game_state = "0110") or (game_state = "0111")) then
 		if ((pixel_row(9 downto 4) = "0000000") and (pixel_col(9 downto 4) = "000000")) then
 		characters <= single_player_text(0);
 		
@@ -182,7 +182,7 @@ begin
 -- Displaying text 'Training mode'
 training_mode : process (clk)
 begin
-	if (game_state = "0001" or game_state = "0010" or game_state = "0011") then
+	if ((game_state = "0001") or (game_state = "0010") or (game_state = "0011")) then
 		if ((pixel_row(9 downto 4) = "0000000") and (pixel_col(9 downto 4) = "000000")) then
 		characters <= training_text(0);
 		
@@ -260,7 +260,7 @@ begin
 -- Displaying text for 'Game Over'	
 game_over : process (clk)
 begin 
-	if (game_state = "1000" or game_state = "0100") then
+	if ((game_state = "1000") or (game_state = "0100")) then
 		if ((pixel_row(9 downto 4) = "0001111") and (pixel_col(9 downto 4) = "001111")) then
 		characters <= game_over_text(0);
 		
@@ -294,7 +294,7 @@ begin
 -- Displaying text for 'Paused'
 pause : process (clk)
 begin
-	if (game_state = "0011" or game_state = "0111") then
+	if ((game_state = "0011") or (game_state = "0111")) then
 	
 		if ((pixel_row(9 downto 4) = "0001111") and (pixel_col(9 downto 4) = "010001")) then
 		characters <= pause_text(0);
