@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TextDisplay
-Thu Jun 04 23:49:13 2020
+Fri Jun 05 00:38:05 2020
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Jun 04 23:49:13 2020          ;
+; Analysis & Synthesis Status        ; Failed - Fri Jun 05 00:38:05 2020          ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; TextDisplay                                ;
 ; Top-level Entity Name              ; TextDisplay                                ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 04 23:49:11 2020
+    Info: Processing started: Fri Jun 05 00:38:04 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TextDisplay -c TextDisplay
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
@@ -309,27 +309,6 @@ Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(232): signal 
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(233): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(233): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(234): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(236): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(236): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(237): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(239): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(239): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(240): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(242): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(242): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(243): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(245): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(245): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(246): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(248): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(248): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(249): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(251): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(251): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(252): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(254): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(254): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(255): signal "score_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(230): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(263): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(264): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -363,62 +342,6 @@ Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(311): signal 
 Warning (10620): VHDL warning at TextDisplay.vhd(311): comparison between unequal length operands always returns FALSE
 Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(314): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10620): VHDL warning at TextDisplay.vhd(314): comparison between unequal length operands always returns FALSE
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(324): signal "game_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(325): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(325): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(326): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(328): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(330): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(332): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(334): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(336): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(338): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(340): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(342): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(344): signal "score3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(347): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(347): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(348): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(350): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(352): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(354): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(356): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(358): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(360): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(362): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(364): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(366): signal "score2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(369): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(369): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(370): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(372): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(374): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(376): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(378): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(380): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(382): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(384): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(386): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(388): signal "score1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(391): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(391): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(392): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(394): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(396): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(398): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(400): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(402): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(404): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(406): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(408): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TextDisplay.vhd(410): signal "score0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at TextDisplay.vhd(322): inferring latch(es) for signal or variable "characters", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(322)
-Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(322)
-Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(322)
-Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(322)
-Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(322)
-Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(322)
 Info (10041): Inferred latch for "characters[0]" at TextDisplay.vhd(230)
 Info (10041): Inferred latch for "characters[1]" at TextDisplay.vhd(230)
 Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(230)
@@ -431,19 +354,18 @@ Info (10041): Inferred latch for "characters[2]" at TextDisplay.vhd(44)
 Info (10041): Inferred latch for "characters[3]" at TextDisplay.vhd(44)
 Info (10041): Inferred latch for "characters[4]" at TextDisplay.vhd(44)
 Info (10041): Inferred latch for "characters[5]" at TextDisplay.vhd(44)
-Error (10028): Can't resolve multiple constant drivers for net "characters[5]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
-Error (10029): Constant driver at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "characters[4]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
-Error (10028): Can't resolve multiple constant drivers for net "characters[3]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
-Error (10028): Can't resolve multiple constant drivers for net "characters[2]" at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
-Error (10028): Can't resolve multiple constant drivers for net "characters[1]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[5]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
 Error (10029): Constant driver at TextDisplay.vhd(230) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 230
-Error (10028): Can't resolve multiple constant drivers for net "characters[0]" at TextDisplay.vhd(322) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 322
+Error (10028): Can't resolve multiple constant drivers for net "characters[4]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[3]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[2]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[1]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
+Error (10028): Can't resolve multiple constant drivers for net "characters[0]" at TextDisplay.vhd(44) File: D:/CompSys302VHDLuProject/TextDisplayTest/TextDisplay.vhd Line: 44
 Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 9 errors, 247 warnings
-    Error: Peak virtual memory: 4622 megabytes
-    Error: Processing ended: Thu Jun 04 23:49:13 2020
-    Error: Elapsed time: 00:00:02
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 8 errors, 176 warnings
+    Error: Peak virtual memory: 4624 megabytes
+    Error: Processing ended: Fri Jun 05 00:38:05 2020
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 

@@ -227,35 +227,35 @@ begin
 	end process training_mode;
 	
 --Displaying the player score
-score_display : process (clk)
-begin
-	if (game_state = "0101" or game_state = "0110" or game_state = "0111") then
-		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000000")) then
-		characters <= score_text(0);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000001")) then
-		characters <= score_text(1);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000010")) then
-		characters <= score_text(2);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000011")) then
-		characters <= score_text(3);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000100")) then
-		characters <= score_text(4);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000101")) then
-		characters <= score_text(5);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000110")) then
-		characters <= score_text(6);
-		
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000111")) then
-		characters <= score_text(7);
-	end if;
-	end if;
-end process score_display;	
+--score_display : process (clk)
+--begin
+--	if (game_state = "0101" or game_state = "0110" or game_state = "0111") then
+--		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000000")) then
+--		characters <= score_text(0);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000001")) then
+--		characters <= score_text(1);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000010")) then
+--		characters <= score_text(2);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000011")) then
+--		characters <= score_text(3);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000100")) then
+--		characters <= score_text(4);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000101")) then
+--		characters <= score_text(5);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000110")) then
+--		characters <= score_text(6);
+--		
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "000111")) then
+--		characters <= score_text(7);
+--	end if;
+--	end if;
+--end process score_display;	
 
 -- Displaying text for 'Game Over'	
 game_over : process (clk)
@@ -318,101 +318,101 @@ begin
 	end if;
 end process pause;
 
---Displaying numerical score
-scorenumber : process (clk)
-begin
-	if (game_state = "0001" or game_state = "0010" or game_state = "0011" or game_state = "0100" or game_state = "0101" or game_state = "0110" or game_state = "0111" or game_state = "1000") then
-		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001000")) then
-			if (score3 = "0000") then
-			characters <= "110000";
-			elsif (score3 = "0001") then
-			characters <= "110001";
-			elsif (score3 = "0010") then
-			characters <= "110010";
-			elsif (score3 = "0011") then
-			characters <= "110011";
-			elsif (score3 = "0100") then
-			characters <= "110100";
-			elsif (score3 = "0101") then
-			characters <= "110101";
-			elsif (score3 = "0110") then
-			characters <= "110110";
-			elsif (score3 = "0111") then
-			characters <= "110111";
-			elsif (score3 = "1000") then
-			characters <= "111000";
-			elsif (score3 = "1001") then
-			characters <= "111001";
-			end if;
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001001")) then
-			if (score2 = "0000") then
-			characters <= "110000";
-			elsif (score2 = "0001") then
-			characters <= "110001";
-			elsif (score2 = "0010") then
-			characters <= "110010";
-			elsif (score2 = "0011") then
-			characters <= "110011";
-			elsif (score2 = "0100") then
-			characters <= "110100";
-			elsif (score2 = "0101") then
-			characters <= "110101";
-			elsif (score2 = "0110") then
-			characters <= "110110";
-			elsif (score2 = "0111") then
-			characters <= "110111";
-			elsif (score2 = "1000") then
-			characters <= "111000";
-			elsif (score2 = "1001") then
-			characters <= "111001";
-			end if;
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001010")) then
-			if (score1 = "0000") then
-			characters <= "110000";
-			elsif (score1 = "0001") then
-			characters <= "110001";
-			elsif (score1 = "0010") then
-			characters <= "110010";
-			elsif (score1 = "0011") then
-			characters <= "110011";
-			elsif (score1 = "0100") then
-			characters <= "110100";
-			elsif (score1 = "0101") then
-			characters <= "110101";
-			elsif (score1 = "0110") then
-			characters <= "110110";
-			elsif (score1 = "0111") then
-			characters <= "110111";
-			elsif (score1 = "1000") then
-			characters <= "111000";
-			elsif (score1 = "1001") then
-			characters <= "111001";
-			end if;
-		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001011")) then
-			if (score0 = "0000") then
-			characters <= "110000";
-			elsif (score0 = "0001") then
-			characters <= "110001";
-			elsif (score0 = "0010") then
-			characters <= "110010";
-			elsif (score0 = "0011") then
-			characters <= "110011";
-			elsif (score0 = "0100") then
-			characters <= "110100";
-			elsif (score0 = "0101") then
-			characters <= "110101";
-			elsif (score0 = "0110") then
-			characters <= "110110";
-			elsif (score0 = "0111") then
-			characters <= "110111";
-			elsif (score0 = "1000") then
-			characters <= "111000";
-			elsif (score0 = "1001") then
-			characters <= "111001";
-			end if;
-		end if;
-	end if;
-end process scorenumber;
+----Displaying numerical score
+--scorenumber : process (clk)
+--begin
+--	if (game_state = "0001" or game_state = "0010" or game_state = "0011" or game_state = "0100" or game_state = "0101" or game_state = "0110" or game_state = "0111" or game_state = "1000") then
+--		if ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001000")) then
+--			if (score3 = "0000") then
+--			characters <= "110000";
+--			elsif (score3 = "0001") then
+--			characters <= "110001";
+--			elsif (score3 = "0010") then
+--			characters <= "110010";
+--			elsif (score3 = "0011") then
+--			characters <= "110011";
+--			elsif (score3 = "0100") then
+--			characters <= "110100";
+--			elsif (score3 = "0101") then
+--			characters <= "110101";
+--			elsif (score3 = "0110") then
+--			characters <= "110110";
+--			elsif (score3 = "0111") then
+--			characters <= "110111";
+--			elsif (score3 = "1000") then
+--			characters <= "111000";
+--			elsif (score3 = "1001") then
+--			characters <= "111001";
+--			end if;
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001001")) then
+--			if (score2 = "0000") then
+--			characters <= "110000";
+--			elsif (score2 = "0001") then
+--			characters <= "110001";
+--			elsif (score2 = "0010") then
+--			characters <= "110010";
+--			elsif (score2 = "0011") then
+--			characters <= "110011";
+--			elsif (score2 = "0100") then
+--			characters <= "110100";
+--			elsif (score2 = "0101") then
+--			characters <= "110101";
+--			elsif (score2 = "0110") then
+--			characters <= "110110";
+--			elsif (score2 = "0111") then
+--			characters <= "110111";
+--			elsif (score2 = "1000") then
+--			characters <= "111000";
+--			elsif (score2 = "1001") then
+--			characters <= "111001";
+--			end if;
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001010")) then
+--			if (score1 = "0000") then
+--			characters <= "110000";
+--			elsif (score1 = "0001") then
+--			characters <= "110001";
+--			elsif (score1 = "0010") then
+--			characters <= "110010";
+--			elsif (score1 = "0011") then
+--			characters <= "110011";
+--			elsif (score1 = "0100") then
+--			characters <= "110100";
+--			elsif (score1 = "0101") then
+--			characters <= "110101";
+--			elsif (score1 = "0110") then
+--			characters <= "110110";
+--			elsif (score1 = "0111") then
+--			characters <= "110111";
+--			elsif (score1 = "1000") then
+--			characters <= "111000";
+--			elsif (score1 = "1001") then
+--			characters <= "111001";
+--			end if;
+--		elsif ((pixel_row(9 downto 4) = "010110") and (pixel_col(9 downto 4) = "001011")) then
+--			if (score0 = "0000") then
+--			characters <= "110000";
+--			elsif (score0 = "0001") then
+--			characters <= "110001";
+--			elsif (score0 = "0010") then
+--			characters <= "110010";
+--			elsif (score0 = "0011") then
+--			characters <= "110011";
+--			elsif (score0 = "0100") then
+--			characters <= "110100";
+--			elsif (score0 = "0101") then
+--			characters <= "110101";
+--			elsif (score0 = "0110") then
+--			characters <= "110110";
+--			elsif (score0 = "0111") then
+--			characters <= "110111";
+--			elsif (score0 = "1000") then
+--			characters <= "111000";
+--			elsif (score0 = "1001") then
+--			characters <= "111001";
+--			end if;
+--		end if;
+--	end if;
+--end process scorenumber;
 		
 text_out : char_rom port map(character_address => characters, font_row => pixel_row(3 downto 1), font_col => pixel_col(3 downto 1), clock => clk, rom_mux_output => ispixelon);
 pixel_on <= ispixelon;
