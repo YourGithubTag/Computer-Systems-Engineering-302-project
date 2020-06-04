@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+pipe_on <= '1' when     (screenBounds='1' and col1_xbounds='0' and ((pixel_column >= col1_x - 50 and pixel_column < col1_x) or (col1_x <= 50 and pixel_column < col1_x)) and (pixel_row <= col1_y or pixel_row > col1_y+100)) or
+								(screenBounds='1' and col2_xbounds='0' and ((pixel_column >= col2_x - 50 and pixel_column < col2_x) or (col2_x <= 50 and pixel_column < col2_x)) and (pixel_row <= col2_y or pixel_row > col2_y+100)) or
+								(screenBounds='1' and col3_xbounds='0' and ((pixel_column >= col3_x - 50 and pixel_column < col3_x) or (col3_x <= 50 and pixel_column < col3_x)) and (pixel_row <= col3_y or pixel_row > col3_y+100))  else '0';

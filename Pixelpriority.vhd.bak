@@ -1,0 +1,13 @@
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+
+ENTITY Pixelpriority IS
+	PORT(	SIGNAL clock, vert_sync					: IN	STD_LOGIC;
+			SIGNAL pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
+			SIGNAL pipe_on, bird_on, ground_on, powerup_on	: IN	STD_LOGIC;
+			SIGNAL red_out, green_out, blue_out	: OUT	STD_LOGIC 
+			);
+END Pixelpriority;

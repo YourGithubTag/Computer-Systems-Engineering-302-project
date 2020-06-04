@@ -1,0 +1,31 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+
+entity clkdivid is 
+port (
+  clk               : in  std_logic;
+  clkout            : out std_logic;
+end clkdivid;
+
+architecture rtl of lfsr_7_plain is  
+signal r_lfsr           : std_logic_vector (8 downto 0);
+begin  
+o_lsfr  <= r_lfsr(8 downto 0);
+
+p_lfsr : process (clk,reset) begin 
+  if (reset = '0') then 
+    r_lfsr   <= "100010100";
+  elsif rising_edge(clk) then 
+		r_lfsr(8) <= r_lfsr(0);
+      r_lfsr(7) <= r_lfsr(8);
+      r_lfsr(6) <= r_lfsr(7) xor r_lfsr(0);
+      r_lfsr(5) <= r_lfsr(6);
+      r_lfsr(4) <= r_lfsr(5) xor r_lfsr(0);
+      r_lfsr(3) <= r_lfsr(4);
+      r_lfsr(2) <= r_lfsr(3);
+      r_lfsr(1) <= r_lfsr(2);
+		r_lfsr(0) <= r_lfsr(1);
+  end if;  
+end process p_lfsr; 
+
+end architecture rtl;
