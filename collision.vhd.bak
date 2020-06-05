@@ -1,0 +1,11 @@
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+
+ENTITY collisionDect IS
+	PORT(	SIGNAL clock, vert_sync, pipe_on, bird_on, ground_on	: IN	STD_LOGIC;
+			SIGNAL Collided	: OUT	STD_LOGIC 
+			);
+END collisionDect;

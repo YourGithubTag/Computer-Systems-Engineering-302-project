@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity passPipe is
+	port(
+		clk : in std_logic;
+		pixel_row, pixel_column : in std_logic_vector(9 downto 0);
+		bird_x, pipe1_x, pipe2_x, pipe3 : in std_logic;
+		passed : out std_logic
+	);
+end entity passPipe;
+
+architecture behaviour of passPipe:
+begin 
+
+process checkPipe 
+begin
+	if ((bird_x and pipe1_x) or  (bird_x and pipe2_x) or (bird_x and pipe3)) then 
+		passed <= '1';
+	else 
+		passed <= '0';
+	end if;
+end process checkPipe;
+
+end architecture passPipe;

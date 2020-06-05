@@ -1,0 +1,44 @@
+
+
+
+
+--Logic to signal the pipe is on (80 is the width of the pipe, 100 is width of the gap)
+	pipe_on <= '1' when 	(col1_on='1' and ((pix_x >= col1_x - 80 and pix_x < col1_x) or (col1_x <= 80 and pix_x < col1_x)) and (pix_y <= col1_y or pix_y > col1_y+100)) or
+								(col2_on='1' and ((pix_x >= col2_x - 80 and pix_x < col2_x) or (col2_x <= 80 and pix_x < col2_x)) and (pix_y <= col2_y or pix_y > col2_y+100)) or
+								(col3_on='1' and ((pix_x >= col3_x - 80 and pix_x < col3_x) or (col3_x <= 80 and pix_x < col3_x)) and (pix_y <= col3_y or pix_y > col3_y+100))
+					else '0';
+								
+
+if moveEN = '1' then
+	if col1_on = '1' then
+		col1_x_next <= col1_x - 1; 
+	end if;
+	if col2_on = '1' then
+		col2_x_next <= col2_x - 1;
+	end if;
+	if col3_on = '1' then
+		col3_x_next <= col3_x - 1;
+	end if;
+end if;
+if col3_x = 450 then	--defines space between columns
+	col1_x_next <= to_unsigned((638+80), 10);
+	col1_y_next <= random;
+end if;
+if col2_x = 450 then
+	col3_x_next <= to_unsigned((638+80), 10);
+	col3_y_next <= random;
+end if;
+if col1_x = 450 then
+	col2_x_next <= to_unsigned((638+80), 10);
+	col2_y_next <= random;
+end if;
+if crashed = '1' then
+	state_next <= start;
+else
+	state_next <= play;
+end if;
+
+--Transition from start state to play state must turn col1 on.
+	col1_on <= '1' when col1_x <= (639+80) and col1_x > 0 else '0';
+	col2_on <= '1' when col2_x <= (639+80) and col2_x > 0 else '0';
+	col3_on <= '1' when col3_x <= (639+80) and col3_x > 0 else '0';
