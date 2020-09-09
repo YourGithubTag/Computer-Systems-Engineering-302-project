@@ -1,9 +1,5 @@
-#uproject
+# Computer Systems Engineering 302 project
 
+This project was to create a Flappy bird clone on an FPGA development board. 
+Overall, working in Quartus with Version Control isn't a great idea, and we ran into many issues over IP configs and other issues, thus there is no real release which can be built. Overall this project was a great project to work on, with hands on RTL Design experience
 
-Okay the ground rules are this,
-
-1. Make your own Branches
-2. Make sure to only push up the VHDL / BDF files, anything other muddies the water
-3. Push often
-4. Sharing project files is kinda hard, so I wouldn't reccomend it for now, im sure we can get this ironed out
